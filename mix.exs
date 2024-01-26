@@ -32,17 +32,15 @@ defmodule NetAddress.MixProject do
     [extra_applications: [:logger]]
   end
 
+  # static analysis tools
+  # docs dependencies
+  # testing
   defp deps,
     do: [
-      # static analysis tools
       {:credo, "~> 1.7", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.4", only: [:dev, :test], runtime: false},
       {:styler, "~> 0.11", only: [:dev, :test], runtime: false},
-
-      # docs dependencies
       {:ex_doc, "~> 0.31", only: :dev, runtime: false},
-
-      # testing
       {:excoveralls, "~> 0.18", only: :test},
       {:stream_data, "~> 0.5", only: :test}
     ]
