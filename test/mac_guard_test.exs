@@ -4,7 +4,7 @@ defmodule MacTest.GuardTest do
   require Mac
 
   def mac?(mac) when Mac.is_mac(mac), do: true
-  def mac?(mac), do: false
+  def mac?(_mac), do: false
 
   test "is_mac/1" do
     refute mac?(:foo)

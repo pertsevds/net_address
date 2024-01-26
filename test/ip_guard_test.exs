@@ -4,16 +4,16 @@ defmodule IPTest.GuardTest do
   require IP
 
   defp byte?(byte) when IP.is_byte(byte), do: true
-  defp byte?(byte), do: false
+  defp byte?(_byte), do: false
 
   defp short?(short) when IP.is_short(short), do: true
-  defp short?(short), do: false
+  defp short?(_short), do: false
 
   defp ipv4?(ipv4) when IP.is_ipv4(ipv4), do: true
-  defp ipv4?(ipv4), do: false
+  defp ipv4?(_ipv4), do: false
 
   defp ipv6?(ipv6) when IP.is_ipv6(ipv6), do: true
-  defp ipv6?(ipv6), do: false
+  defp ipv6?(_ipv6), do: false
 
   test "is_byte/1" do
     refute byte?(-1)
